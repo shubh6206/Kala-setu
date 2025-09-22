@@ -54,7 +54,7 @@ const shilpScanIdentifyHandicraftFlow = ai.defineFlow(
   {
     name: 'shilpScanIdentifyHandicraftFlow',
     inputSchema: ShilpScanIdentifyHandicraftInputSchema,
-    outputSchema: ShililpScanIdentifyHandicraftOutputSchema,
+    outputSchema: ShilpScanIdentifyHandicraftOutputSchema,
   },
   async input => {
     const {output} = await prompt(input);
