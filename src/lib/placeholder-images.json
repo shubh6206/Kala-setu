@@ -1,3 +1,58 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A vibrant and detailed shot of various Indian handicrafts, creating a rich tapestry of colors and textures.",
+      "imageUrl": "https://picsum.photos/seed/hero-bg/1920/1080",
+      "imageHint": "indian handicraft"
+    },
+    {
+      "id": "artisan-portrait-1",
+      "description": "Portrait of a smiling male artisan working on pottery.",
+      "imageUrl": "https://picsum.photos/seed/artisan1/400/400",
+      "imageHint": "artisan portrait"
+    },
+    {
+      "id": "artisan-portrait-2",
+      "description": "Portrait of a female artisan weaving a colorful fabric.",
+      "imageUrl": "https://picsum.photos/seed/artisan2/400/400",
+      "imageHint": "woman weaving"
+    },
+    {
+      "id": "artisan-portrait-3",
+      "description": "Portrait of an elderly artisan doing intricate woodwork.",
+      "imageUrl": "https://picsum.photos/seed/artisan3/400/400",
+      "imageHint": "artisan woodwork"
+    },
+    {
+      "id": "handicraft-1",
+      "description": "A close-up of a Madhubani painting.",
+      "imageUrl": "https://picsum.photos/seed/craft1/600/400",
+      "imageHint": "madhubani painting"
+    },
+    {
+      "id": "handicraft-2",
+      "description": "A terracotta pot with traditional designs.",
+      "imageUrl": "https://picsum.photos/seed/craft2/600/400",
+      "imageHint": "terracotta pot"
+    },
+    {
+      "id": "handicraft-3",
+      "description": "A beautifully crafted wooden toy from Channapatna.",
+      "imageUrl": "https://picsum.photos/seed/craft3/600/400",
+      "imageHint": "wooden toy"
+    },
+    {
+      "id": "map-background",
+      "description": "A stylized, artistic representation of the map of India, perhaps on parchment.",
+      "imageUrl": "https://picsum.photos/seed/map-bg/1200/800",
+      "imageHint": "india map"
+    },
+    {
+      "id": "shilp-scan-placeholder",
+      "description": "A placeholder image for the Shilp-Scan tool, showing a hand holding a phone to scan a pot.",
+      "imageUrl": "https://picsum.photos/seed/shilpscan/800/600",
+      "imageHint": "phone scan"
+    }
+  ]
 }
