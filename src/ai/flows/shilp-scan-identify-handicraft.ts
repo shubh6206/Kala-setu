@@ -28,7 +28,7 @@ const ShilpScanIdentifyHandicraftOutputSchema = z.object({
     .describe('The unique motifs and characteristics of the identified art form.'),
   geographicalLocation: z.string().describe('The geographical location where the art form originates.'),
   // artisanProfiles: z.array(z.string()).describe('Profiles of verified artisans specializing in this craft.'),
-  reasoning: z.string().describe('The AI's reasoning for the identification, including likelihood of accuracy.'),
+  reasoning: z.string().describe('The AI\'s reasoning for the identification, including likelihood of accuracy.'),
 });
 export type ShilpScanIdentifyHandicraftOutput = z.infer<typeof ShilpScanIdentifyHandicraftOutputSchema>;
 
@@ -54,7 +54,7 @@ const shilpScanIdentifyHandicraftFlow = ai.defineFlow(
   {
     name: 'shilpScanIdentifyHandicraftFlow',
     inputSchema: ShilpScanIdentifyHandicraftInputSchema,
-    outputSchema: ShilpScanIdentifyHandicraftOutputSchema,
+    outputSchema: ShililpScanIdentifyHandicraftOutputSchema,
   },
   async input => {
     const {output} = await prompt(input);
