@@ -7,22 +7,40 @@
       "imageHint": "indian handicraft"
     },
     {
-      "id": "artisan-portrait-1",
-      "description": "Portrait of a smiling male artisan working on pottery.",
-      "imageUrl": "https://picsum.photos/seed/artisan1/400/400",
-      "imageHint": "artisan portrait"
+      "id": "potter-avatar",
+      "description": "Professional avatar of a smiling male potter artisan with friendly appearance.",
+      "imageUrl": "https://api.dicebear.com/8.x/adventurer/svg?seed=rajesh-potter-male&backgroundColor=d2691e",
+      "imageHint": "potter artisan avatar"
     },
     {
-      "id": "artisan-portrait-2",
-      "description": "Portrait of a female artisan weaving a colorful fabric.",
-      "imageUrl": "https://picsum.photos/seed/artisan2/400/400",
-      "imageHint": "woman weaving"
+      "id": "painter-avatar", 
+      "description": "Professional avatar of a smiling female Madhubani painter artisan with traditional Indian appearance.",
+      "imageUrl": "https://api.dicebear.com/8.x/adventurer/svg?seed=meena-devi-madhubani-artist&backgroundColor=ff6347&skinColor=f4c2a1",
+      "imageHint": "female madhubani painter artisan avatar"
     },
     {
-      "id": "artisan-portrait-3",
-      "description": "Portrait of an elderly artisan doing intricate woodwork.",
-      "imageUrl": "https://picsum.photos/seed/artisan3/400/400",
-      "imageHint": "artisan woodwork"
+      "id": "toymaker-avatar",
+      "description": "Professional photo of Ibrahim Khan, an elderly master toymaker from Channapatna, working on traditional wooden toys in his marketplace workshop.",
+      "imageUrl": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face",
+      "imageHint": "ibrahim khan toymaker channapatna wooden toys elderly craftsman"
+    },
+    {
+      "id": "weaver-avatar",
+      "description": "Professional avatar of a graceful female weaver artisan with traditional appearance.",
+      "imageUrl": "https://api.dicebear.com/8.x/adventurer/svg?seed=lakshmi-weaver-female&backgroundColor=9370db",
+      "imageHint": "weaver artisan avatar"
+    },
+    {
+      "id": "jeweler-avatar",
+      "description": "Professional avatar of a sophisticated male jeweler artisan with elegant appearance.",
+      "imageUrl": "https://api.dicebear.com/8.x/adventurer/svg?seed=arjun-jeweler-male&backgroundColor=ffd700",
+      "imageHint": "jeweler artisan avatar"
+    },
+    {
+      "id": "sculptor-avatar",
+      "description": "Professional avatar of a creative male sculptor artisan with artistic appearance.",
+      "imageUrl": "https://api.dicebear.com/8.x/adventurer/svg?seed=sculptor-male&backgroundColor=696969",
+      "imageHint": "sculptor artisan avatar"
     },
     {
       "id": "handicraft-1",

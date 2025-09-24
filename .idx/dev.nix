@@ -37,6 +37,10 @@
         web = {
           command = ["npm" "run" "dev" "--" "--port" "$PORT" "--hostname" "0.0.0.0"];
           manager = "web";
+          env = {
+            # Ensure the correct port is used
+            PORT = "$PORT";
+          };
         };
       };
     };

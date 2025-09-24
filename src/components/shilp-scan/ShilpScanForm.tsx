@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { shilpScanIdentifyHandicraft, ShilpScanIdentifyHandicraftOutput } from '@/ai/flows/shilp-scan-identify-handicraft';
 import { shilpScanConfidenceLevel, ShilpScanConfidenceLevelOutput } from '@/ai/flows/shilp-scan-confidence-level';
@@ -40,8 +40,49 @@ export function ShilpScanForm() {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.onloadend = () => resolve(reader.result as string);
-      reader.onerror = reject;
+      reader.onerror = () => reject(new Error('Failed to read file'));
       reader.readAsDataURL(file);
+    });
+  };
+
+  const compressImage = (file: File): Promise<File> => {
+    return new Promise((resolve) => {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      const img = new window.Image();
+      
+      img.onload = () => {
+        // Calculate new dimensions (max 1024px on longest side)
+        const maxSize = 1024;
+        let { width, height } = img;
+        
+        if (width > height && width > maxSize) {
+          height = (height * maxSize) / width;
+          width = maxSize;
+        } else if (height > maxSize) {
+          width = (width * maxSize) / height;
+          height = maxSize;
+        }
+        
+        canvas.width = width;
+        canvas.height = height;
+        
+        ctx?.drawImage(img, 0, 0, width, height);
+        
+        canvas.toBlob((blob) => {
+          if (blob) {
+            const compressedFile = new File([blob], file.name, {
+              type: 'image/jpeg',
+              lastModified: Date.now(),
+            });
+            resolve(compressedFile);
+          } else {
+            resolve(file);
+          }
+        }, 'image/jpeg', 0.8);
+      };
+      
+      img.src = URL.createObjectURL(file);
     });
   };
 
@@ -56,11 +97,37 @@ export function ShilpScanForm() {
       return;
     }
 
+    // Validate file type
+    if (!file.type.startsWith('image/')) {
+      toast({
+        title: "Invalid file type",
+        description: "Please select a valid image file (JPG, PNG, etc.).",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Validate file size (max 10MB)
+    if (file.size > 10 * 1024 * 1024) {
+      toast({
+        title: "File too large",
+        description: "Please select an image smaller than 10MB.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsLoading(true);
     setResult(null);
     setConfidence(null);
 
     try {
+      // Show demo mode notification
+      toast({
+        title: "🤖 AI Analysis Starting",
+        description: "Analyzing your handicraft image... (Demo mode with mock AI responses)",
+      });
+
       const dataUri = await toDataURL(file);
       const identificationResult = await shilpScanIdentifyHandicraft({ photoDataUri: dataUri });
       setResult(identificationResult);
@@ -71,12 +138,18 @@ export function ShilpScanForm() {
           confidenceScore: identificationResult.confidence,
         });
         setConfidence(confidenceResult);
+        
+        toast({
+          title: "✨ Analysis Complete!",
+          description: `Identified as ${identificationResult.artForm} with ${confidenceResult.confidenceLevel.toLowerCase()} confidence.`,
+        });
       }
     } catch (error) {
-      console.error(error);
+      console.error('Shilp-Scan error:', error);
+      const errorMessage = error instanceof Error ? error.message : "There was an error analyzing the image. Please try again.";
       toast({
         title: "Analysis Failed",
-        description: "There was an error analyzing the image. Please try again.",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {
@@ -105,8 +178,18 @@ export function ShilpScanForm() {
                         
                         <div className="space-y-2">
                              <label htmlFor="file-upload" className="font-medium text-foreground">Upload an Image</label>
-                             <Input id="file-upload" type="file" accept="image/*" onChange={handleFileChange} className="file:text-primary file:font-semibold"/>
-                             <p className="text-sm text-muted-foreground">Upload a clear picture of a handicraft item.</p>
+                             <Input 
+                               id="file-upload" 
+                               type="file" 
+                               accept="image/*" 
+                               onChange={handleFileChange} 
+                               className="file:text-primary file:font-semibold"
+                               disabled={isLoading}
+                               aria-describedby="file-help"
+                             />
+                             <p id="file-help" className="text-sm text-muted-foreground">
+                               Upload a clear picture of a handicraft item. Max size: 10MB. Supported formats: JPG, PNG, WebP.
+                             </p>
                         </div>
                        
 

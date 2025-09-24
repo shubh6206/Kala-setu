@@ -1,0 +1,29 @@
+{
+  "meenaAvatarOptions": [
+    {
+      "style": "personas",
+      "url": "https://api.dicebear.com/8.x/personas/svg?seed=meena-devi-female&backgroundColor=ff6347",
+      "description": "Friendly female persona style"
+    },
+    {
+      "style": "adventurer",
+      "url": "https://api.dicebear.com/8.x/adventurer/svg?seed=meena-madhubani-female&backgroundColor=ff6347",
+      "description": "Adventurous female style"
+    },
+    {
+      "style": "avataaars",
+      "url": "https://api.dicebear.com/8.x/avataaars/svg?seed=meena-painter-woman&backgroundColor=ff6347",
+      "description": "Classic avataaars female style"
+    },
+    {
+      "style": "initials",
+      "url": "https://api.dicebear.com/8.x/initials/svg?seed=Meena%20Devi&backgroundColor=ff6347&textColor=ffffff",
+      "description": "Elegant initials style"
+    },
+    {
+      "style": "thumbs",
+      "url": "https://api.dicebear.com/8.x/thumbs/svg?seed=meena-female&backgroundColor=ff6347",
+      "description": "Simple thumbs style"
+    }
+  ]
+}

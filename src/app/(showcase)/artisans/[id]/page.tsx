@@ -6,8 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function ArtisanProfilePage({ params }: { params: { id: string } }) {
-  const artisan = artisans.find((a) => a.id === params.id);
+export default async function ArtisanProfilePage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const artisan = artisans.find((a) => a.id === id);
 
   if (!artisan) {
     notFound();

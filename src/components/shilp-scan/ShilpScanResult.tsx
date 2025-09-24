@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { ShilpScanIdentifyHandicraftOutput } from '@/ai/flows/shilp-scan-identify-handicraft';
 import { ShilpScanConfidenceLevelOutput } from '@/ai/flows/shilp-scan-confidence-level';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';

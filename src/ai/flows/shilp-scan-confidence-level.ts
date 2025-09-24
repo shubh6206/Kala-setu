@@ -29,7 +29,35 @@ export type ShilpScanConfidenceLevelOutput = z.infer<typeof ShilpScanConfidenceL
 export async function shilpScanConfidenceLevel(
   input: ShilpScanConfidenceLevelInput
 ): Promise<ShilpScanConfidenceLevelOutput> {
-  return shilpScanConfidenceLevelFlow(input);
+  try {
+    return await shilpScanConfidenceLevelFlow(input);
+  } catch (error) {
+    console.error('Error in shilpScanConfidenceLevel:', error);
+    
+    // Fallback to mock confidence analysis
+    console.log('Using mock data for confidence level analysis');
+    
+    const { confidenceScore } = input;
+    
+    let confidenceLevel: string;
+    let reasoning: string;
+    
+    if (confidenceScore >= 0.8) {
+      confidenceLevel = 'High';
+      reasoning = 'The AI model shows high confidence in this identification based on clear visual features, distinctive patterns, and strong matches with known characteristics of this art form.';
+    } else if (confidenceScore >= 0.6) {
+      confidenceLevel = 'Medium';
+      reasoning = 'The identification shows moderate confidence. While several key features match the identified art form, some elements may be ambiguous or partially obscured.';
+    } else {
+      confidenceLevel = 'Low';
+      reasoning = 'The confidence level is low due to unclear features, partial visibility, or mixed characteristics that make definitive identification challenging.';
+    }
+    
+    return {
+      confidenceLevel,
+      reasoning: `${reasoning} Note: This is a demonstration using mock AI analysis as the actual AI service is not available.`
+    };
+  }
 }
 
 const prompt = ai.definePrompt({

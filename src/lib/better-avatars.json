@@ -1,0 +1,24 @@
+{
+  "avatarStyles": {
+    "potter-avatar": {
+      "male": "https://api.dicebear.com/8.x/personas/svg?seed=rajesh-potter&backgroundColor=d2691e",
+      "female": "https://api.dicebear.com/8.x/personas/svg?seed=female-potter&backgroundColor=d2691e"
+    },
+    "painter-avatar": {
+      "male": "https://api.dicebear.com/8.x/personas/svg?seed=male-painter&backgroundColor=ff6347",
+      "female": "https://api.dicebear.com/8.x/personas/svg?seed=meena-painter&backgroundColor=ff6347"
+    },
+    "toymaker-avatar": {
+      "male": "https://api.dicebear.com/8.x/personas/svg?seed=ibrahim-toymaker&backgroundColor=32cd32",
+      "female": "https://api.dicebear.com/8.x/personas/svg?seed=female-toymaker&backgroundColor=32cd32"
+    },
+    "weaver-avatar": {
+      "male": "https://api.dicebear.com/8.x/personas/svg?seed=male-weaver&backgroundColor=9370db",
+      "female": "https://api.dicebear.com/8.x/personas/svg?seed=lakshmi-weaver&backgroundColor=9370db"
+    },
+    "jeweler-avatar": {
+      "male": "https://api.dicebear.com/8.x/personas/svg?seed=arjun-jeweler&backgroundColor=ffd700",
+      "female": "https://api.dicebear.com/8.x/personas/svg?seed=female-jeweler&backgroundColor=ffd700"
+    }
+  }
+}
