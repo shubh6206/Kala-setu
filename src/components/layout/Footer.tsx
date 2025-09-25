@@ -57,6 +57,11 @@ export function Footer() {
                   About Us
                 </Link>
               </li>
+              <li>
+                <Link href="/join-artisan" className="hover:text-foreground transition-colors">
+                  Join as Artisan
+                </Link>
+              </li>
             </ul>
           </div>
 

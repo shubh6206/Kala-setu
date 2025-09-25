@@ -65,10 +65,15 @@ export const artisanRegistrationSchema = z.object({
     .string()
     .min(50, 'Story must be at least 50 characters')
     .max(2000, 'Story must be less than 2000 characters'),
-  portfolio: z
-    .array(z.instanceof(File))
-    .min(1, 'Please upload at least one portfolio image')
-    .max(10, 'Maximum 10 portfolio images allowed'),
+  password: z
+    .string()
+    .min(8, 'Password must be at least 8 characters')
+    .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/, 'Password must contain at least one uppercase letter, one lowercase letter, and one number'),
+  confirmPassword: z
+    .string()
+}).refine((data) => data.password === data.confirmPassword, {
+  message: "Passwords don't match",
+  path: ["confirmPassword"],
 });
 
 // Search validation

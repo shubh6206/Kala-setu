@@ -17,6 +17,7 @@ const navLinks = [
   { href: '/shilp-scan', label: 'Shilp-Scan' },
   { href: '/artisans', label: 'Artisans' },
   { href: '/craft-map', label: 'Craft Map' },
+  { href: '/join-artisan', label: 'Join as Artisan' },
 ];
 
 export function Header() {

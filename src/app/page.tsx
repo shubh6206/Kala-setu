@@ -142,8 +142,10 @@ export default function Home() {
             <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
               Join our community to showcase your craft to a global audience, get fair prices, and grow your business.
             </p>
-            <Button size="lg" className="mt-8 font-bold">
-              Join KalaSetu
+            <Button size="lg" className="mt-8 font-bold" asChild>
+              <Link href="/join-artisan">
+                Join KalaSetu
+              </Link>
             </Button>
         </div>
       </section>
