@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A vibrant and detailed shot of various Indian handicrafts, creating a rich tapestry of colors and textures.",
-      "imageUrl": "https://picsum.photos/seed/hero-bg/1920/1080",
-      "imageHint": "indian handicraft"
+      "description": "A vibrant collage of Indian heritage crafts including colorful textiles, intricate pottery, traditional jewelry, and handwoven fabrics showcasing the rich cultural diversity of India.",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&h=1080&fit=crop&crop=center",
+      "imageHint": "indian heritage crafts colorful textiles pottery jewelry handwoven fabrics cultural diversity"
     },
     {
       "id": "potter-avatar",
