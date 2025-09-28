@@ -100,7 +100,10 @@ export const craftLocations: CraftLocation[] = [
     { id: 'cl4', name: 'Phulkari Embroidery', state: 'Punjab', description: 'Vibrant floral embroidery work on shawls and dupattas, literally meaning "flower work".', artisans: [] },
     { id: 'cl5', name: 'Blue Pottery', state: 'Rajasthan', description: 'Distinctive glazed pottery in blue and white, originally from Persia but perfected in Jaipur.', artisans: ['1'] },
     { id: 'cl6', name: 'Chikankari', state: 'Uttar Pradesh', description: 'Delicate white-on-white embroidery work, traditionally done on fine muslin fabric.', artisans: [] },
-    
+     { id: 'cl24', name: 'Wood Carving & Aipan', state: 'Uttarakhand', description: 'Intricate wood carvings and Aipan folk art paintings.', artisans: [] },
+    { id: 'cl25', name: 'Durries & Shawls', state: 'Haryana', description: 'Hand-woven durries (rugs) and shawls.', artisans: [] },
+        {id: 'cl31', name: 'Zardozi Embroidery', state: 'Delhi', description: 'Intricate metal embroidery.', artisans: [] },
+
     // Western States
     { id: 'cl7', name: 'Bandhani Tie-Dye', state: 'Gujarat', description: 'Ancient tie-dye technique creating intricate patterns through selective dyeing of fabric.', artisans: [] },
     { id: 'cl8', name: 'Warli Painting', state: 'Maharashtra', description: 'Tribal art form using simple geometric shapes to depict daily life and nature.', artisans: [] },
@@ -114,15 +117,20 @@ export const craftLocations: CraftLocation[] = [
     
     // Eastern States
     { id: 'cl14', name: 'Kantha Embroidery', state: 'West Bengal', description: 'Running stitch embroidery creating beautiful quilts and garments with recycled fabrics.', artisans: [] },
-    { id: 'cl15', name: 'Pattachitra', state: 'Odisha', description: 'Traditional scroll paintings depicting mythological narratives with natural colors.', artisans: [] },
+   { id: 'cl15', name: 'Appliqué & Silver Filigree', state: 'Odisha', description: 'Appliqué work and intricate silver filigree jewelry and decorative items.', artisans: [] },
     { id: 'cl16', name: 'Muga Silk', state: 'Assam', description: 'Golden silk produced by silkworms native to Assam, known for its natural golden color.', artisans: [] },
     { id: 'cl17', name: 'Bamboo Crafts', state: 'Meghalaya', description: 'Intricate basketry and utility items crafted from locally sourced bamboo.', artisans: [] },
     { id: 'cl18', name: 'Manipuri Textiles', state: 'Manipur', description: 'Handwoven textiles with intricate patterns, especially the traditional Manipuri shawls.', artisans: [] },
-    
+        { id: 'cl26', name: 'Naga Shawls', state: 'Nagaland', description: 'Unique patterned shawls.', artisans: [] },
+        { id: 'cl27', name: 'Bamboo and cane Crafts', state: 'Arunachal Pradesh', description: 'Unique items made from Bamboo.', artisans: [] },
+        { id: 'cl28', name: 'Puanchei textile', state: 'Mizoram', description: 'Traditional textile patterns.', artisans: [] },
+
     // Southern States
     { id: 'cl19', name: 'Mysore Silk', state: 'Karnataka', description: 'Lustrous silk sarees with rich colors and gold thread work, traditionally made in Mysore.', artisans: ['3'] },
     { id: 'cl20', name: 'Kalamkari', state: 'Andhra Pradesh', description: 'Hand-painted or block-printed cotton textiles depicting mythological stories.', artisans: [] },
-    { id: 'cl21', name: 'Pochampally Ikat', state: 'Telangana', description: 'Geometric resist-dyeing technique creating distinctive diamond patterns on silk and cotton.', artisans: [] },
+    { id: 'cl21', name: 'Pochampally Ikat, Nirmal Paintings, Bidri craft', state: 'Telangana', description: 'Geometric resist-dyeing technique creating distinctive diamond patterns on silk and cotton.', artisans: [] },
     { id: 'cl22', name: 'Tanjore Paintings', state: 'Tamil Nadu', description: 'Classical South Indian paintings with rich colors, gold foil, and precious stones.', artisans: [] },
     { id: 'cl23', name: 'Kathakali Masks', state: 'Kerala', description: 'Elaborate painted masks and costumes used in traditional Kathakali dance performances.', artisans: [] },
+        { id: 'cl29', name: 'Thangka Paintings', state: 'Sikkim', description: 'Depicting deities and religious figures.', artisans: [] },
+        { id: 'cl30', name: 'Bamboo and Cane Handicrafts, loinloom weaving', state: 'Tripura', description: 'Handicrafts from Bamboo cane', artisans: [] },
 ];
